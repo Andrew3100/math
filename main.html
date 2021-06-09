@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <!-- Обязательные метатеги -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+    <title>Калькулятор</title>
+    <script src="index.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <!--Здеь хранится сам макет-->
+            <div class="card" style="margin-top: 120px; width: 600px;">
+                <div class="card-body bg-info">
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-8">
+                                <form name="form">
+
+                                    <input class="form-control" name="calculator" id="calculator">
+
+                                </form>
+                            </div>
+                            <div class="col-2 text-center">
+                                <button onclick="DeleteSymbol()" type="button" class="btn btn-dark btn-block"><</button>
+                            </div>
+                            <div class="col-2">
+                                <button onclick="ClearWindow()" type="button" class="btn btn-dark btn-block">С</button>
+                            </div>
+
+                        </div>
+                        <hr>
+                        <div class="row bg-info">
+                            <div class="col text-right">
+                                <!--Непечатаемый символ-->
+                                <h4 id="res" style="color: green;">&nbsp;</h4>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col text-center"><button onclick="GetVal('7')" id="n7" class="btn btn-dark btn-block">7</button></div>
+                            <div class="col text-center"><button onclick="GetVal('8')" id="n8" class="btn btn-dark btn-block">8</button></div>
+                            <div class="col text-center"><button onclick="GetVal('9')" id="n9" class="btn btn-dark btn-block">9</button></div>
+                            <div class="col text-center"><button onclick="GetVal('cos')" id="ncos" class="btn btn-dark btn-block">COS</button></div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col text-center"><button type="button" onclick="GetVal('4')" id="n4" class="btn btn-dark btn-block">4</button></div>
+                            <div class="col text-center"><button type="button" onclick="GetVal('5')" id="n5" class="btn btn-dark btn-block">5</button></div>
+                            <div class="col text-center"><button type="button" onclick="GetVal('6')" id="n6" class="btn btn-dark btn-block">6</button></div>
+                            <div class="col text-center"><button type="button" onclick="GetVal('sin')" id="nsin" class="btn btn-dark btn-block">SIN</button></div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col text-center"><button type="button" onclick="GetVal('1')" id="n1" class="btn btn-dark btn-block">1</button></div>
+                            <div class="col text-center"><button type="button" onclick="GetVal('2')" id="n2" class="btn btn-dark btn-block">2</button></div>
+                            <div class="col text-center"><button type="button" onclick="GetVal('3')" id="n3" class="btn btn-dark btn-block">3</button></div>
+                            <div class="col text-center"><button type="button" onclick="GetVal('^')" id="nst" class="btn btn-dark btn-block">x^n</button></div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col text-center"><button type="button" onclick="ClearWindow()" id="clear" class="btn btn-dark btn-block">C</button></div>
+                            <div class="col text-center"><button type="button" onclick="GetVal('0')" id="n0" class="btn btn-dark btn-block">0</button></div>
+                            <div class="col text-center"><button type="button" onclick="GetVal('.')" id="n," class="btn btn-dark btn-block">,</button></div>
+                            <div class="col text-center"><button type="button" onclick="GetResultMath()" id="ncor" class="btn btn-dark btn-block">√</button></div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col text-center"><button type="button" onclick="GetVal('/')" id="n/" class="btn btn-dark btn-block">/</button></div>
+                            <div class="col text-center"><button type="button" onclick="GetVal('*')" id="n*" class="btn btn-dark btn-block">*</button></div>
+                            <div class="col text-center"><button type="button" onclick="GetVal('+')" id="n+" class="btn btn-dark btn-block">+</button></div>
+                            <div class="col text-center"><button type="button" onclick="GetVal('-')" id="n-" class="btn btn-dark btn-block">-</button></div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="col text-center"><button onclick="GetResultMath()" type="button" class="btn btn-dark btn-block">Выполнить операцию</button></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Optional JavaScript -->
+<!-- Popper.js first, then Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</body>
+</html>
